@@ -22,11 +22,6 @@ nav ul li{
     display: inline-block;
     background-color: #227c9d;
     border-radius: 5%;
-    transition: all 2s;
-}
-/* transformacion en menú */
-nav ul li:hover{
-    transform: scale(1.2);
 }
 nav ul li a{
     list-style-type: none;
@@ -51,14 +46,6 @@ div ul{
     margin: 10px;
     padding: 15px;
     list-style-type: none;
-    transition: all 2s;
-}
-/* transformacion cronograma */
-div ul:hover{
-    transform: scale(1.5) rotate(360deg) translateX(40px);
-    -webkit-transform: scale(1.5) rotate(360deg) translateX(40px);
-    -o-transform: scale(1.5) rotate(360deg) translateX(40px);
-    -moz-transform: scale(1.5) rotate(360deg) translateX(40px);
 }
 .dias{
     display: flex;
