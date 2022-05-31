@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #dec0e1;
+    font-family: 'Gudea', sans-serif;
+    text-align: center;
+}
+header img{
+    height: 10vh;
+    width:auto;
+    margin: 1%;
+}
+
+nav ul li{
+    padding: 1%;
+    margin: 0.5%;
+    display: inline-block;
+    background-color: #227c9d;
+    border-radius: 5%;
+    transition: all 2s;
+}
+/* transformacion en menú */
+nav ul li:hover{
+    transform: scale(1.2);
+}
+nav ul li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+.fondositio1{
+    background-image: url(../img/FondoSitio1.jpg);
+}
+body h1{
+    margin: 2px;
+    padding: 2px;
+    font-family: 'Ultra', serif;
+    color: #ee6c4d;
+}
+body h2{
+    margin: 2px;
+    font-family: 'Ultra', serif;
+    color: #ee6c4d;
+}
+div ul{
+    margin: 10px;
+    padding: 15px;
+    list-style-type: none;
+    transition: all 2s;
+}
+/* transformacion cronograma */
+div ul:hover{
+    transform: scale(1.5) rotate(360deg) translateX(40px);
+    -webkit-transform: scale(1.5) rotate(360deg) translateX(40px);
+    -o-transform: scale(1.5) rotate(360deg) translateX(40px);
+    -moz-transform: scale(1.5) rotate(360deg) translateX(40px);
+}
+.dias{
+    display: flex;
+    width: 33.33%;
+    margin: auto;
+}
+.dias ul{
+    background-color: white;
+    border-radius: 10%;
+}
+.historia{
+    grid-area: historia;
+    width: 500px;
+    margin: auto;
+}
+aside{
+    margin: 5px;
+    grid-area: ads;
+}
+.medidas{
+    grid-area: medidas;
+}
+.galeria{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.galeria img{
+    width: 100%;
+}
+section article{
+    display: inline-block;
+}
+footer{
+    margin: 5px;
+    padding: 5px;
+    color: #227c9d;
+    height: 100px;
+    width: 100%;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "historia ads"
+    "historia ads"
+    "medidas medidas";
+}
+
+/* tablet */
+@media screen and (max-width: 1024px){
+    body{
+        font-size: small;
+    }
+    .dias--viernes{
+        grid-area: vie;
+    }
+    .dias--sabado{
+        grid-area: sab;
+    }
+    .dias--domingo{
+        grid-area: dom;
+    }
+    .dias{
+        display: grid;
+        margin: auto;
+        width: 80%;
+        grid-template-columns: repeat (2,1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "vie sab"
+        "vie sab"
+        "dom dom";
+    }
+
+    .info{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "ads"
+        "historia"
+        "medidas";
+    }
+    .galeria{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,2fr);
+    }
+    
+}
+/* smartphones */
+@media screen and (max-width: 768px){
+    body{
+        font-size: smaller;
+    }
+    .dias--viernes{
+        grid-area: vie;
+    }
+    .dias--sabado{
+        grid-area: sab;
+    }
+    .dias--domingo{
+        grid-area: dom;
+    }
+    .dias{
+        display: grid;
+        margin: auto;
+        width: 80%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "vie"
+        "sab"
+        "dom";
+    }
+    .info{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "historia"
+        "ads"
+        "medidas";
+    }
+   .galeria{
+       grid-template-columns: repeat(1,1fr);
+       grid-template-rows: repeat(8,1fr);
+   }
+}
