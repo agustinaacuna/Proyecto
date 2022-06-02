@@ -11,27 +11,14 @@ body{
     text-align: center;
 }
 header img{
-    height: 10vh;
-    width:auto;
     margin: 1%;
 }
-
-nav ul li{
-    padding: 1%;
-    margin: 0.5%;
-    display: inline-block;
-    background-color: #227c9d;
-    border-radius: 5%;
-    transition: all 2s;
+.link.mofif{
+    color: #227c9d;
 }
-/* transformacion1 */
-nav ul li:hover{
-    transform: scale(1.2);
-}
-nav ul li a{
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
+/* NO SE COMO ARREGLAR EL MENÚ HELP */
+.navbar-toggler{
+    background-image: url(../img/Menu.png);
 }
 .fondositio1{
     background-image: url(../img/FondoSitio1.jpg);
@@ -55,10 +42,7 @@ div ul{
 }
 /* transformacion 2*/
 div ul:hover{
-    transform: scale(1.5) rotate(360deg) translateX(40px);
-    -webkit-transform:  scale(1.5) rotate(360deg) translateX(40px);
-    -o-transform:  scale(1.5) rotate(360deg) translateX(40px);
-    -moz-transform:  scale(1.5) rotate(360deg) translateX(40px);
+    transform: scale(1.5);
 }
 .dias{
     display: flex;
